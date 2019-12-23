@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta property="og:image" content="">
-    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="300">
     <meta property="og:url" content="">
@@ -20,12 +20,14 @@
   <body>
     <header>
       <div class="siteWidth container-fluid">
-        <div class="innerWrapper"><a class="logo" href="#section1" onclick="Index.go_to(this, event)"><span>pay</span> Expert</a>
+        <div class="innerWrapper"><a class="logo" href="#section1" onclick="Index.go_to(this, event)"><img src="img/logo.png" alt=""></a>
           <nav class="navigation" id="mobMenu">
             <ul>
-              <li><a href="#section3" onclick="Index.go_to(this, event)">Возможности</a></li>
-              <li><a href="#section5" onclick="Index.go_to(this, event)">Преимущества</a></li>
-              <li><a href="#section6" onclick="Index.go_to(this, event)">Выбрать Pay Expert POS</a></li>
+              <li><a href="#section3" onclick="Index.go_to(this, event)">О нас</a></li>
+              <li><a href="#section5" onclick="Index.go_to(this, event)">Как мы работаем</a></li>
+              <li><a href="#section6" onclick="Index.go_to(this, event)">Учебный процесс</a></li>
+              <li><a href="#section6" onclick="Index.go_to(this, event)">Этапы развития</a></li>
+              <li><a href="#section6" onclick="Index.go_to(this, event)">Отзывы</a></li>
             </ul>
             <button class="closeMenu" onclick="Index.closeMenu();">
                   <svg class="icon icon-closeModal ">
@@ -33,26 +35,18 @@
                   </svg>
             </button>
           </nav>
-          <div class="langBox">
-            <div class="langBtn" onclick="Index.openLangBox(this)">
-              <div class="item">
-                <div class="flag" style="background-image:url(img/svg/ru.svg)"></div><span>Rus</span>
-              </div>
-            </div>
-            <div class="langMenu">
-              <div class="item">
-                <div class="flag" style="background-image:url(img/svg/gb.svg)"></div><a href="#">Eng</a>
-              </div>
-              <div class="item">
-                <div class="flag" style="background-image:url(img/svg/de.svg)"></div><a href="#">Deu</a>
-              </div>
-            </div>
+          <div class="additionBtns"><a class="phone" href="tel:+380678072101" target="_blank">+38 (067) 707 21 01</a>
+            <button class="callBackBtn"><span>Заказать звонок</span>
+                  <svg class="icon icon-arrow ">
+                    <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                  </svg>
+            </button>
+            <button class="openMenu" onclick="Index.openMenu()">
+                  <svg class="icon icon-menuBurger ">
+                    <use xlink:href="img/svg/sprite.svg#menuBurger"></use>
+                  </svg>
+            </button>
           </div>
-          <button class="openMenu" onclick="Index.openMenu()">
-                <svg class="icon icon-menuBurger ">
-                  <use xlink:href="img/svg/sprite.svg#menuBurger"></use>
-                </svg>
-          </button>
         </div>
       </div>
     </header>
@@ -61,13 +55,13 @@
         <div class="siteWidth container-fluid">
           <div class="innerWrapper">
             <div class="playBtnBlock">
-              <div class="text">Узнать о школе за 2 минуты</div>
-              <button class="playbtn"></button>
+              <div class="text">Узнать<br> о школе<br> за 2 минуты</div>
+              <button class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></button>
             </div>
             <div class="textBlock">
-              <h3 class="title">Детская IT-школа в Днепре</h3>
-              <div class="text1">Даем детям важные знания и навыки для успешного будущего в цифровом мире</div>
-              <div class="text2">Запишитесь на бесплатную профориентацию, чтобы раскрыть потенциал ребенка и получить персональный план развития</div>
+              <h3 class="title">Детская IT-школа<br> в Днепре</h3>
+              <div class="text1 content_text">Даем детям важные знания и навыки для успешного будущего в цифровом мире</div>
+              <div class="text2 content_text">Запишитесь на бесплатную профориентацию, чтобы раскрыть потенциал ребенка и получить персональный план развития</div>
               <div class="btnWrap">
                 <button class="btn">Записаться</button>
               </div>
@@ -494,11 +488,11 @@
           <div class="innerWrapper"><a class="logo" href="#section1" onclick="Index.go_to(this, event)"><span>pay</span> Expert</a><a class="address adr1" href="#">ул. Троицкая, 21Г.,<br> ТСК «Новый металлург», 3 эт.</a><a class="address adr2" href="#">ул. Запорожское<br> шоссе, 53Б., 2-й этаж.</a>
             <div class="phones"><a href="tel:+380678072101" target="_blank">+38 (067) 807 21 01</a><a href="tel:+380663330523" target="_blank">+38 (066) 333 05 23</a></div>
             <div class="additionElements">
-              <div class="callBackBtn"><span>Заказать звонок</span>
-                    <svg class="icon icon-arrowRight ">
-                      <use xlink:href="img/svg/sprite.svg#arrowRight"></use>
+              <button class="callBackBtn"><span>Заказать звонок</span>
+                    <svg class="icon icon-arrow ">
+                      <use xlink:href="img/svg/sprite.svg#arrow"></use>
                     </svg>
-              </div>
+              </button>
               <div class="socials"><a href="#">
                       <svg class="icon icon-facebook ">
                         <use xlink:href="img/svg/sprite.svg#facebook"></use>
