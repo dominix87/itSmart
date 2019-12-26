@@ -24,9 +24,72 @@ var Index =
     Index.magnificPopUp();
     Index.fixedHeader();
     Index.tinyAnimation();
+    Index.sliderInit();
   },
 
+  sliderInit:function () {
+    var slickElement = $('.sliderBlock', '.section9'),
+        slickArrows = $('.arrows', '.section9'),
+        slickDots = $('.navigation', '.section9'),
+        currentSlideSite = $('.currentSlide', '.section9') ;
+
+    $(slickElement).slick({
+      infinite: true,
+      arrows: true,
+      dots: true,
+      prevArrow: '<button class="prev__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+      nextArrow: '<button class="next__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+      appendArrows: slickArrows,
+      appendDots: slickDots,
+      customPaging: function (slider, i) {
+        var thumb = $(slider.$slides[i]).data();
+        return '0' + (i + 1);
+      },
+    });
+
+    $(slickElement).on('init, reinit, afterChange', function (event, slick, currentSlide, nextSlide) {
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $(currentSlideSite).text('0' + i);
+    //
+    //   $(textBlock).hide();
+    //   $(textBlock).eq(currentSlide).show().find('.spinIt').spincrement({from: 0, duration: 4000});
+    });
+  },
+
+
   tinyAnimation: function(){
+    $('.section2').viewportChecker({
+      offset: 200,
+      callbackFunction: function(){
+        $('h2.title','.section2').addClass('run')
+      }
+    });
+    $('.desc','.section6').viewportChecker({
+      offset: 200,
+      callbackFunction: function(){
+        $('.desc','.section6').addClass('run')
+      }
+    });
+    $('.desc','.section7').viewportChecker({
+      offset: 200,
+      callbackFunction: function(){
+        $('.desc','.section7').addClass('run')
+      }
+    });
+    $('.desc','.section8').viewportChecker({
+      offset: 200,
+      callbackFunction: function(){
+        $('.desc','.section8').addClass('run')
+      }
+    });
+    $('.title','.section11').viewportChecker({
+      offset: 200,
+      callbackFunction: function(){
+        $('.title','.section11').addClass('run')
+      }
+    });
+
+
     $('.animate1').addClass("hidden").viewportChecker({
       classToAdd: 'animated fadeInUp',
       offset: 200
