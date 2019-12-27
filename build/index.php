@@ -1,3 +1,8 @@
+<?php
+require_once 'db/data.php'
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
@@ -36,7 +41,7 @@
             </button>
           </nav>
           <div class="additionBtns"><a class="phone" href="tel:+380678072101" target="_blank">+38 (067) 707 21 01</a>
-            <button class="callBackBtn"><span>Заказать звонок</span>
+            <button class="callBackBtn" onclick="Index.callBackForm()"><span>Заказать звонок</span>
                   <svg class="icon icon-arrow ">
                     <use xlink:href="img/svg/sprite.svg#arrow"></use>
                   </svg>
@@ -56,14 +61,14 @@
           <div class="innerWrapper">
             <div class="playBtnBlock">
               <div class="text">Узнать<br> о школе<br> за 2 минуты</div>
-              <button class="playBtn openVideo" href="https://www.youtube.com/watch?v=NeQM1c-XCDc"><i class="fa fa-play" aria-hidden="true"></i></button>
+              <button class="playBtn openVideo" href="https://www.youtube.com/watch?v=AvOSkk6N6Ik&amp;t"><i class="fa fa-play" aria-hidden="true"></i></button>
             </div>
             <div class="textBlock">
               <h3 class="title">Детская IT-школа<br> в Днепре</h3>
               <div class="text1 content_text">Даем детям важные знания<br class='later2'> и навыки для успешного будущего<br class='later2'> в цифровом мире</div>
               <div class="text2 content_text">Запишитесь на бесплатную профориентацию, чтобы раскрыть потенциал ребенка и получить персональный план развития</div>
               <div class="btnWrap">
-                <button class="btn">Записаться</button>
+                <button class="btn" onclick="Index.showFormSpec(this)" data-title="Записаться на бесплатную консультация" data-btnName="Записаться" data-orderType="Запись на бесплатную консультацию">Записаться</button>
               </div>
             </div>
           </div>
@@ -107,7 +112,7 @@
               <div class="descriptionTop desc">Мы сами родители и&nbsp;прекрасно понимаем, насколько для вас важно обеспечить успешный старт в&nbsp;жизни ребенка</div>
               <div class="descriptionBottom content_text">Поэтому разработали с&nbsp;методистами профессиональную консультацию по&nbsp;профориентации, которая ответит на&nbsp;все эти вопросы и поможет выбрать правильный вектор развития ребёнка</div>
               <div class="btnWrap">
-                <button class="btn">Записаться на профориентацию</button>
+                <button class="btn" onclick="Index.showFormSpec(this)" data-title="Записаться на профориентацию" data-btnName="Записаться" data-orderType="запись на проориентацию">Записаться на профориентацию</button>
               </div>
             </div>
           </div>
@@ -163,7 +168,7 @@
                 <input type="hidden" name="project_name" value="">
                 <input type="hidden" name="admin_email" value="">
                 <input type="hidden" name="registration_type" value="форма">
-                <input type="hidden" name="order_type" value="">
+                <input type="hidden" name="order_type" value="Запись на бесплатную проориентацию (4 блок)">
                 <input type="hidden" name="page_url" value="">
                 <input type="hidden" name="user_agent" value="&lt;?php echo $user_agent?&gt;">
                 <input type="hidden" name="utm_source" value="&lt;?php echo $data[&quot;utm_source&quot;]?&gt;">
@@ -205,7 +210,7 @@
           </div>
           <div class="middleSide">
             <div class="videoBlock">
-              <div class="img_wrap"><a class="el" href="#"><img src="img/videoStub.jpg" alt=""></a></div>
+              <div class="img_wrap"><span class="el" id="pgzvpxJDn1s" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="https://img.youtube.com/vi/pgzvpxJDn1s/hqdefault.jpg" alt=""></span></div>
             </div>
             <div class="textBlock">
               <div class="description desc">С помощью современных технологий мы развиваем у&nbsp;школьников знания о&nbsp;бизнесе, навыки общения и&nbsp;управления собой.</div>
@@ -385,16 +390,16 @@
                 <div class="currentSlide">01</div>
                 <div class="sliderBlock">
                   <div class="item">
-                    <div class="img_wrap"><span class="el" id="NeQM1c-XCDc" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="img/videoStub2.jpg" alt=""></span></div>
+                    <div class="img_wrap"><span class="el" id="jDIeFpQwK8U" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="http://i1.ytimg.com/vi/jDIeFpQwK8U/maxresdefault.jpg" alt=""></span></div>
                   </div>
                   <div class="item">
-                    <div class="img_wrap"><span class="el" id="NeQM1c-XCDc" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="img/videoStub2.jpg" alt=""></span></div>
+                    <div class="img_wrap"><span class="el" id="4LFngcry3Ys" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="http://i1.ytimg.com/vi/4LFngcry3Ys/maxresdefault.jpg" alt=""></span></div>
                   </div>
                   <div class="item">
-                    <div class="img_wrap"><span class="el" id="NeQM1c-XCDc" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="img/videoStub2.jpg" alt=""></span></div>
+                    <div class="img_wrap"><span class="el" id="lf5e9o7_bJw" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="https://img.youtube.com/vi/lf5e9o7_bJw/hqdefault.jpg" alt=""></span></div>
                   </div>
                   <div class="item">
-                    <div class="img_wrap"><span class="el" id="NeQM1c-XCDc" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="img/videoStub2.jpg" alt=""></span></div>
+                    <div class="img_wrap"><span class="el" id="Rhw4gRZWJ4k&amp;" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="http://i1.ytimg.com/vi/Rhw4gRZWJ4k/maxresdefault.jpg" alt=""></span></div>
                   </div>
                 </div>
                 <div class="sliderControls">
@@ -406,7 +411,7 @@
             <div class="rightSide">
               <h2 class="title">Что<br class='later2'> говорят наши<br class='later2'> ученики и их<br class='later2'> родители</h2>
               <div class="btnWrap">
-                <button class="btn">Записаться на экскурсию в школу</button>
+                <button class="btn" onclick="Index.showFormSpec(this)" data-title="Записаться на экскурсию в школу" data-btnName="Записаться" data-orderType="Запись на экскурсию в школу">Записаться на экскурсию в школу</button>
               </div>
             </div>
           </div>
@@ -457,7 +462,7 @@
                     <input type="hidden" name="project_name" value="B-lawyer">
                     <input type="hidden" name="admin_email" value="">
                     <input type="hidden" name="registration_type" value="pop-up форма">
-                    <input type="hidden" name="order_type" value="Call request">
+                    <input type="hidden" name="order_type" value="Запись на бесплатную проориентацию (футер)">
                     <input type="hidden" name="page_url" value="">
                     <input type="hidden" name="user_agent" value="&lt;?php echo $user_agent?&gt;">
                     <input type="hidden" name="utm_source" value="&lt;?php echo $data[&quot;utm_source&quot;]?&gt;">
@@ -501,7 +506,7 @@
           <div class="innerWrapper"><a class="logo" href="#section1" onclick="Index.go_to(this, event)"><img src="img/logo.png" alt=""></a><a class="content_text address adr1" href="https://goo.gl/maps/H3fhk9PZckre8T4VA" target="_blank">ул. Троицкая, 21Г.,<br> ТСК «Новый металлург», 3 эт.</a><a class="content_text address adr2" href="https://goo.gl/maps/fZ7Jig6xZ1PgMHN87" target="_blank">ул. Запорожское<br> шоссе, 53Б., 2-й этаж.</a>
             <div class="phones"><a href="tel:+380678072101" target="_blank">+38 (067) 807 21 01</a><a href="tel:+380663330523" target="_blank">+38 (066) 333 05 23</a></div>
             <div class="additionElements">
-              <button class="callBackBtn"><span>Заказать звонок</span>
+              <button class="callBackBtn" onclick="Index.callBackForm()"><span>Заказать звонок</span>
                     <svg class="icon icon-arrow ">
                       <use xlink:href="img/svg/sprite.svg#arrow"></use>
                     </svg>
@@ -535,7 +540,6 @@
       <div class="orderPanel" id="mainForm">
         <div class="wrapper">
           <p class="title">Заказать звонок</p>
-          <p class="desc">для заказа заполните форму ниже</p>
           <form onsubmit="Index.sendInit(this);return false" novalidate>
             <input type="hidden" name="project_name" value="B-lawyer">
             <input type="hidden" name="admin_email" value="">
@@ -575,7 +579,7 @@
       </div>
       <div class="orderPanel" id="callBackForm">
         <div class="wrapper">
-          <p class="title">Мы вам перезвоним</p>
+          <p class="title">Заказать звонок</p>
           <form onsubmit="Index.sendInit(this);return false" novalidate>
             <input type="hidden" name="project_name" value="B-lawyer">
             <input type="hidden" name="admin_email" value="">
@@ -608,7 +612,7 @@
               <div class="text">Телефон</div>
             </div>
             <div class="btnWrap">
-              <button class="btn">Заказать взонок</button>
+              <button class="btn">Записаться</button>
             </div>
           </form>
         </div>

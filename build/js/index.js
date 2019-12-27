@@ -50,9 +50,6 @@ var Index =
     $(slickElement).on('init, reinit, afterChange', function (event, slick, currentSlide, nextSlide) {
       var i = (currentSlide ? currentSlide : 0) + 1;
       $(currentSlideSite).text('0' + i);
-    //
-    //   $(textBlock).hide();
-    //   $(textBlock).eq(currentSlide).show().find('.spinIt').spincrement({from: 0, duration: 4000});
     });
   },
 
@@ -204,28 +201,28 @@ var Index =
     if(error == 0)
     {
       $(sbmBtn).attr('disabled','disabled');
-      $(fThis).trigger('reset');
-      $(location).attr('href', 'success.html')
+
       // setTimeout(function(){
       //   $(location).attr('href', 'success.html')
       // }, 5000);
-      // $.ajax(
-      //     {
-      //       url: "db/registration.php",
-      //       cache: false,
-      //       type: "POST",
-      //       data: formData,
-      //       dataType: "json",
-      //       success: function(data){
-      //         if(data.status == 'ok'){
-      //           $(location).attr('href', '/success.html');
-      //         }
-      //       },
-      //       error: function(){
-      //         console.log('ALARM ERROR');
-      //       }
-      //     }
-      // );
+      $.ajax(
+          {
+            url: "db/registration.php",
+            cache: false,
+            type: "POST",
+            data: formData,
+            dataType: "json",
+            success: function(data){
+              if(data.status == 'success'){
+                $(fThis).trigger('reset');
+                $(location).attr('href', 'success.html')
+              }
+            },
+            error: function(){
+              console.log('ALARM ERROR');
+            }
+          }
+      );
     }
     else{
       console.log('error')
