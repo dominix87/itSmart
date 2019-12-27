@@ -64,6 +64,12 @@ var Index =
         $('h2.title','.section2').addClass('run')
       }
     });
+    $('h2.title','.section5').viewportChecker({
+      offset: 200,
+      callbackFunction: function(){
+        $('h2.title','.section5').addClass('run')
+      }
+    });
     $('.desc','.section6').viewportChecker({
       offset: 200,
       callbackFunction: function(){
@@ -123,7 +129,7 @@ var Index =
 
   //Инициализация прокрутки
   go_to:function(fThis, e){
-    if($(window).width() < 600){
+    if($(window).width() < 991){
       $('.closeMenu','#mobMenu').click();
     }
 
