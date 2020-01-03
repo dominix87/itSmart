@@ -1,3 +1,8 @@
+<?php
+require_once 'db/data.php'
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
@@ -55,14 +60,15 @@
         <div class="siteWidth container-fluid">
           <div class="innerWrapper">
             <div class="playBtnBlock">
-              <div class="text">Узнать<br> о школе<br> за 2 минуты</div><a class="playBtn openVideo" href="https://www.youtube.com/watch?v=AvOSkk6N6Ik"><i class="fa fa-play" aria-hidden="true"></i></a>
+              <div class="text">Узнать<br> о школе<br> за 2 минуты</div>
+              <button class="playBtn openVideo" href="https://www.youtube.com/watch?v=AvOSkk6N6Ik"><i class="fa fa-play" aria-hidden="true"></i></button>
             </div>
             <div class="textBlock">
               <h3 class="title">Детская IT-школа<br> в Днепре</h3>
               <div class="text1 content_text">Даем детям важные знания<br class='later2'> и навыки для успешного будущего<br class='later2'> в цифровом мире</div>
               <div class="text2 content_text">Запишитесь на бесплатную профориентацию, чтобы раскрыть потенциал ребенка и получить персональный план развития</div>
               <div class="btnWrap">
-                <button class="btn" onclick="Index.showFormSpec(this)" data-title="Записаться на бесплатную профориентацию" data-btnName="Записаться" data-orderType="Запись на бесплатную профориентацию(первый экран)">Записаться</button>
+                <button class="btn" onclick="Index.showFormSpec(this)" data-title="Записаться на бесплатную консультация" data-btnName="Записаться" data-orderType="Запись на бесплатную консультацию">Записаться</button>
               </div>
             </div>
           </div>
@@ -101,7 +107,6 @@
               </div>
             </div>
           </div>
-          <div class="imageBlock"><img src="img/bl2BG1.png" alt=""></div>
           <div class="bottomSide">
             <div class="textBlock">
               <div class="descriptionTop desc">Мы сами родители и&nbsp;прекрасно понимаем, насколько для вас важно обеспечить успешный старт в&nbsp;жизни ребенка</div>
@@ -118,17 +123,16 @@
           <div class="topSide">
             <div class="leftSide">
               <h2 class="title">Каждый<br class='later2'> ребенок уникален</h2>
-              <div class="imageBlock mobile"><img class="lozad" src="img/spacer.gif" data-src="img/bl3img1.jpg" alt=""></div>
+              <div class="imageBlock mobile"><img src="img/bl3img1.jpg" alt=""></div>
               <div class="description content_text">Профориентация помогает<br class='later2'> раскрыть эту уникальность<br class='later2'> и составить индивидуальный<br class='later2'> план развития ребенка</div>
             </div>
             <div class="rightSide">
-              <div class="imageBlock"><img class="lozad" src="img/spacer.gif" data-src="img/bl3img1.jpg" alt=""></div>
+              <div class="imageBlock"><img src="img/bl3img1.jpg" alt=""></div>
             </div>
           </div>
           <div class="bottomSide">
             <div class="item">
-              <div class="mobileTitle content_title">Преподаватель-методист проведёт беседу с&nbsp;вашим ребенком</div>
-              <div class="imageWrap"><img class="lozad" src="img/spacer.gif" data-src="img/bl3img2.jpg" alt=""></div>
+              <div class="imageWrap"><img src="img/bl3img2.jpg" alt=""></div>
               <div class="textBlock">
                 <div class="title content_title">Преподаватель-методист проведёт беседу с&nbsp;вашим ребенком</div>
                 <ul class="content_text">
@@ -138,8 +142,7 @@
               </div>
             </div>
             <div class="item">
-              <div class="mobileTitle content_title">Составим план персонального развития ребёнка</div>
-              <div class="imageWrap"><img class="lozad" src="img/spacer.gif" data-src="img/bl3img3.jpg" alt=""></div>
+              <div class="imageWrap"><img src="img/bl3img3.jpg" alt=""></div>
               <div class="textBlock">
                 <div class="title content_title">Составим план персонального развития ребёнка</div>
                 <div class="text1 content_text">Вы получите наглядную визуальную карту, в&nbsp;которой будут:</div>
@@ -157,7 +160,7 @@
       <section class="section4" id="section4">
         <div class="siteWidth container-fluid">
           <div class="formWrap">
-            <div class="el1"><img class="lozad" src="img/spacer.gif" data-src="img/bl4img1.png" alt=""></div>
+            <div class="el1"><img src="img/bl4img1.png" alt=""></div>
             <div class="wrapper">
               <h3 class="title">Запишитесь на&nbsp;бесплатную профориентацию</h3>
               <div class="description content_text">чтобы определить оптимальное для ребенка<br class='later2'> направление в обучении</div>
@@ -205,16 +208,11 @@
           <div class="topSide">
             <h2 class="title">Детская<br class='later2'> IT-школа СМАРТ<br class='later2'> <span>это пространство<br class='later2'> для&nbsp;развития<br class='later2'> и&nbsp;самореализации<br> детей через IT</span></h2>
           </div>
-          <div class="imageBlock"><img src="img/bl5BG1.png" alt=""></div>
           <div class="middleSide">
-            <div class="textBlock mobile">
-              <div class="description desc">С помощью современных технологий мы развиваем у&nbsp;школьников знания о&nbsp;бизнесе, навыки общения и&nbsp;управления собой.</div>
-              <div class="text1 content_text">Именно эти навыки помогут им в&nbsp;будущем стать успешными специалистами, руководителями, бизнесменами.</div>
-            </div>
             <div class="videoBlock">
-              <div class="img_wrap"><span class="el" id="pgzvpxJDn1s" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img class="lozad" src="img/spacer.gif" data-src="img/videoStub.jpg" alt=""></span></div>
+              <div class="img_wrap"><span class="el" id="pgzvpxJDn1s" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="https://img.youtube.com/vi/pgzvpxJDn1s/hqdefault.jpg" alt=""></span></div>
             </div>
-            <div class="textBlock desktop">
+            <div class="textBlock">
               <div class="description desc">С помощью современных технологий мы развиваем у&nbsp;школьников знания о&nbsp;бизнесе, навыки общения и&nbsp;управления собой.</div>
               <div class="text1 content_text">Именно эти навыки помогут им в&nbsp;будущем стать успешными специалистами, руководителями, бизнесменами.</div>
             </div>
@@ -226,9 +224,9 @@
                 <div class="topItem">
                       <svg class="icon icon-icon11 ">
                         <use xlink:href="img/svg/sprite.svg#icon11"></use>
-                      </svg><span>Фокус на современные<br> технологии</span>
+                      </svg><span>Фокус на современные<br> технологии.</span>
                 </div>
-                <div class="bottomItem">Мы знаем профессии будущего и&nbsp;следим за трендами. Постоянно обновляем программы, методики и&nbsp;внедряем инновации в&nbsp;обучение детей.</div>
+                <div class="bottomItem">Мы знаем профессии будущего и&nbsp;следим за трендами. Постоянно обновляем программы, методики и&nbsp;внедряем инновации в&nbsp;обучение детей</div>
               </div>
               <div class="item">
                 <div class="topItem">
@@ -236,7 +234,7 @@
                         <use xlink:href="img/svg/sprite.svg#icon5"></use>
                       </svg><span>Обучение<br> через практику</span>
                 </div>
-                <div class="bottomItem">После каждого занятия ребенок видит практический результат своей работы. А&nbsp;также знает, как применить полученный навык в&nbsp;повседневной жизни.</div>
+                <div class="bottomItem">После каждого занятия ребенок видит практический результат своей работы. А&nbsp;также знает, как применить полученный навык в&nbsp;повседневной жизни</div>
               </div>
               <div class="item">
                 <div class="topItem">
@@ -244,7 +242,7 @@
                         <use xlink:href="img/svg/sprite.svg#icon7"></use>
                       </svg><span>У нас дружеская<br> атмосфера</span>
                 </div>
-                <div class="bottomItem">Нет разделения на учитель и&nbsp;ученики, есть наставник и&nbsp;команда вдохновленных ребят, которые создают собственные проекты.</div>
+                <div class="bottomItem">Нет разделения на учитель и&nbsp;ученики, есть наставник и&nbsp;команда вдохновленных ребят, которые создают собственные проекты</div>
               </div>
             </div>
           </div>
@@ -262,22 +260,11 @@
                       <use xlink:href="img/svg/sprite.svg#plus"></use>
                     </svg>
               </div>
-              <div class="imageBlock"><img class="lozad" src="img/spacer.gif" data-src="img/bl6img1.jpg" alt=""></div>
+              <div class="imageBlock"><img src="img/bl6img1.jpg" alt=""></div>
               <div class="textBlock">
                 <div class="age">5-7<span>лет</span></div>
                 <div class="title content_title">Формирование личности</div>
                 <div class="text content_text">Закладываем базовые навыки<br> и готовим к дальнейшему обучению<br> в школе с&nbsp;помощью цифровой<br> грамотности, эмоциональной<br> и&nbsp;социальной подготовки.</div>
-                <div class="hiddenText">
-                  <div class="hiddenTitle content_title">Программы обучения:</div>
-                  <ul class="content_text">
-                    <li>Занимательная информатика</li>
-                    <li>2D анимация и мультипликация</li>
-                    <li>Робототехника, 1 уровень</li>
-                  </ul>
-                  <div class="btnWrap">
-                    <button class="btn">Записаться на встречу</button>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
@@ -286,23 +273,11 @@
                       <use xlink:href="img/svg/sprite.svg#plus"></use>
                     </svg>
               </div>
-              <div class="imageBlock"><img class="lozad" src="img/spacer.gif" data-src="img/bl6img2.jpg" alt=""></div>
+              <div class="imageBlock"><img src="img/bl6img2.jpg" alt=""></div>
               <div class="textBlock">
                 <div class="age">8-10<span>лет</span></div>
                 <div class="title content_title">Базовая подготовка</div>
                 <div class="text content_text">Учимся использовать современные<br> технологии, применять их<br> в&nbsp;повседневной жизни, искать ответы<br> на&nbsp;вопросы: «Что и&nbsp;как работает?»</div>
-                <div class="hiddenText">
-                  <div class="hiddenTitle content_title">Программы обучения:</div>
-                  <ul class="content_text">
-                    <li>IT-пространство</li>
-                    <li>Визуальное программирование</li>
-                    <li>Моя первая видеошкола</li>
-                    <li>Робототехника, 2 уровень</li>
-                  </ul>
-                  <div class="btnWrap">
-                    <button class="btn">Записаться на встречу</button>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
@@ -311,25 +286,11 @@
                       <use xlink:href="img/svg/sprite.svg#plus"></use>
                     </svg>
               </div>
-              <div class="imageBlock"><img class="lozad" src="img/spacer.gif" data-src="img/bl6img3.jpg" alt=""></div>
+              <div class="imageBlock"><img src="img/bl6img3.jpg" alt=""></div>
               <div class="textBlock">
                 <div class="age">11-13<span>лет</span></div>
                 <div class="title content_title">Профориентация</div>
                 <div class="text content_text">Дети получают фундаментальные<br> знания по&nbsp;программированию,<br> дизайну, инженерии. Закладываем<br> умение работать над собственным<br> проектом, даем навыки тайм-<br>менеджмента.</div>
-                <div class="hiddenText">
-                  <div class="hiddenTitle content_title">Программы обучения:</div>
-                  <ul class="content_text">
-                    <li>Визуальное программирование</li>
-                    <li>Продвинутый пользователь Windows и MacOS</li>
-                    <li>Компьютерная графика</li>
-                    <li>Школа видеоблогинга</li>
-                    <li>Школа фотографии</li>
-                    <li>Робототехника, 3-4 уровень</li>
-                  </ul>
-                  <div class="btnWrap">
-                    <button class="btn">Записаться на встречу</button>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="item">
@@ -338,27 +299,11 @@
                       <use xlink:href="img/svg/sprite.svg#plus"></use>
                     </svg>
               </div>
-              <div class="imageBlock"><img class="lozad" src="img/spacer.gif" data-src="img/bl6img4.jpg" alt=""></div>
+              <div class="imageBlock"><img src="img/bl6img4.jpg" alt=""></div>
               <div class="textBlock">
                 <div class="age">13-16<span>лет</span></div>
                 <div class="title content_title">Основы профессии</div>
                 <div class="text content_text">Ученики получают углубленные<br> знания и&nbsp;навыки в&nbsp;выбранном<br> направлении: программирование,<br> дизайн, инженерия. Работают над<br> собственными и&nbsp;командными проектами.</div>
-                <div class="hiddenText">
-                  <div class="hiddenTitle content_title">Программы обучения:</div>
-                  <ul class="content_text">
-                    <li>Программирование</li>
-                    <li>Разработка игр</li>
-                    <li>Создание веб-сайтов</li>
-                    <li>Графический дизайн</li>
-                    <li>UI/UX дизайн</li>
-                    <li>3D: графика и анимация</li>
-                    <li>Персонажное моделирование</li>
-                    <li>InstaGirl</li>
-                  </ul>
-                  <div class="btnWrap">
-                    <button class="btn">Записаться на встречу</button>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="descBlock">
@@ -372,7 +317,6 @@
           <div class="innerWrapper">
             <div class="leftSide">
               <h2 class="title">4 составляющих учебного процесса в&nbsp;СМАРТ</h2>
-              <div class="imageBlock"><img src="img/bl7BG1.png" alt=""></div>
             </div>
             <div class="rightSide">
               <div class="content">
@@ -380,30 +324,30 @@
                       <svg class="icon icon-icon9 ">
                         <use xlink:href="img/svg/sprite.svg#icon9"></use>
                       </svg>
-                  <div class="text content_text"><span>Проектный подход в обучении.</span> Каждый учебный модуль заканчивается проектом, из&nbsp;которых ребята формируют свое портфолио</div>
+                  <div class="text content_text"><span>Проектный подход в обучении.</span> Каждый учебный модуль заканчивается проектом, из которых ребята формируют свое портфолио</div>
                 </div>
                 <div class="item">
                       <svg class="icon icon-icon8 ">
                         <use xlink:href="img/svg/sprite.svg#icon8"></use>
                       </svg>
-                  <div class="text content_text"><span>Геймификация</span> Мотивирующая система оценивания - ученики за&nbsp;свои успехи и активности зарабатывают бонусы и&nbsp;обменивают их на ценные призы</div>
+                  <div class="text content_text"><span>Геймификация</span> Мотивирующая система оценивания - ученики за свои успехи и активности зарабатывают бонусы и обменивают их на ценные призы</div>
                 </div>
                 <div class="item">
                       <svg class="icon icon-icon4 ">
                         <use xlink:href="img/svg/sprite.svg#icon4"></use>
                       </svg>
-                  <div class="text content_text"><span>Экскурсии в IT-компании</span> Встречи и мотивирующие лекции с&nbsp;предпринимателями и&nbsp;IT-экспертами города</div>
+                  <div class="text content_text"><span>Экскурсии в IT-компании</span> Встречи и мотивирующие лекции с предпринимателями и IT-экспертами города</div>
                 </div>
                 <div class="item">
                       <svg class="icon icon-icon6 ">
                         <use xlink:href="img/svg/sprite.svg#icon6"></use>
                       </svg>
-                  <div class="text content_text"><span>Занятия в лаборатории Soft Skills</span> Тренинги по развитию творческого и&nbsp;логического мышления, командной работе, управлению временем, самопрезентации, ораторскому искусству и актерскому мастерству</div>
+                  <div class="text content_text"><span>Занятия в лаборатории Soft Skills</span> Тренинги по развитию творческого и логического мышления, командной работе, управлению временем, самопрезентации, ораторскому искусству и актерскому мастерству</div>
                 </div>
               </div>
               <div class="bottomSide">
                 <div class="leftBottomSide">
-                  <div class="description desc"><span>Обучение легко совмещать с&nbsp;занятиями</span> в&nbsp;общеобразовательной школе и&nbsp;кружками</div>
+                  <div class="description desc"><span>Обучение легко совмещать с&nbsp;занятиями</span> в общеобразовательной школе и кружками</div>
                 </div>
                 <div class="rightBottomSide">
                   <ul class="content_text">
@@ -422,14 +366,14 @@
           <div class="topSide">
             <div class="leftSide">
               <h2 class="title">Родители — часть нашей команды</h2>
-              <div class="description content_text">Помогаем родителям лучше понимать увлечения и интересы ребенка, быть на&nbsp;одной волне, а&nbsp;детям — стать ближе к&nbsp;родителям, быть открытыми и делиться своими успехами.</div>
+              <div class="description content_text">Помогаем родителям лучше понимать увлечения и интересы ребенка, быть на&nbsp;одной волне, а&nbsp;детям — стать ближе к&nbsp;родителям, быть открытыми и делиться своими успехами</div>
             </div>
-            <div class="rightSide"><img class="lozad" src="img/spacer.gif" data-src="img/bl8img1.jpg" alt=""></div>
+            <div class="rightSide"><img src="img/bl8img1.jpg" alt=""></div>
           </div>
           <div class="bottomSide">
             <div class="title desc"><span>Что мы<br class='later2'> для этого делаем:</span></div>
             <ul class="content_text">
-              <li><span>Постоянная</span> обратная связь<br class='later'> от&nbsp;преподавателей<br class='later'> и&nbsp;тьютора школы.</li>
+              <li><span>Постоянная</span> обратная связь<br class='later'> от преподавателей<br class='later'> и тьютора школы.</li>
               <li><span>Открытые занятия</span> (демонстрация<br> промежуточных<br class='later'> результатов обучения).</li>
               <li><span>Публичная защита</span> проектов.</li>
               <li><span>Школа родителей —</span> тематические встречи<br class='later'> родителей с IT-экспертами<br class='later'> и тьюторами школы.</li>
@@ -446,16 +390,16 @@
                 <div class="currentSlide">01</div>
                 <div class="sliderBlock">
                   <div class="item">
-                    <div class="img_wrap"><span class="el" id="jDIeFpQwK8U" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img class="lozad" src="img/spacer.gif" data-src="http://i1.ytimg.com/vi/jDIeFpQwK8U/maxresdefault.jpg" alt=""></span></div>
+                    <div class="img_wrap"><span class="el" id="jDIeFpQwK8U" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="http://i1.ytimg.com/vi/jDIeFpQwK8U/maxresdefault.jpg" alt=""></span></div>
                   </div>
                   <div class="item">
-                    <div class="img_wrap"><span class="el" id="4LFngcry3Ys" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img class="lozad" src="img/spacer.gif" data-src="http://i1.ytimg.com/vi/4LFngcry3Ys/maxresdefault.jpg" alt=""></span></div>
+                    <div class="img_wrap"><span class="el" id="4LFngcry3Ys" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="http://i1.ytimg.com/vi/4LFngcry3Ys/maxresdefault.jpg" alt=""></span></div>
                   </div>
                   <div class="item">
-                    <div class="img_wrap"><span class="el" id="lf5e9o7_bJw" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img class="lozad" src="img/spacer.gif" data-src="https://img.youtube.com/vi/lf5e9o7_bJw/hqdefault.jpg" alt=""></span></div>
+                    <div class="img_wrap"><span class="el" id="lf5e9o7_bJw" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="https://img.youtube.com/vi/lf5e9o7_bJw/hqdefault.jpg" alt=""></span></div>
                   </div>
                   <div class="item">
-                    <div class="img_wrap"><span class="el" id="Rhw4gRZWJ4k&amp;" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img class="lozad" src="img/spacer.gif" data-src="http://i1.ytimg.com/vi/Rhw4gRZWJ4k/maxresdefault.jpg" alt=""></span></div>
+                    <div class="img_wrap"><span class="el" id="Rhw4gRZWJ4k&amp;" onclick="Index.openYoutube(this)" data-params="modestbranding=1&amp;showinfo=0&amp;controls=1&amp;vq=hd720"><span class="playBtn"><i class="fa fa-play" aria-hidden="true"></i></span><img src="http://i1.ytimg.com/vi/Rhw4gRZWJ4k/maxresdefault.jpg" alt=""></span></div>
                   </div>
                 </div>
                 <div class="sliderControls">
@@ -477,7 +421,6 @@
         <div class="siteWidth container-fluid">
           <div class="innerWrapper">
             <h2 class="title">Как<br class='later2'> мы поможем<br class='later2'> реализовать<br class='later2'> потенциал<br class='later2'> вашего ребенка</h2>
-            <div class="imageBlock"><img src="img/bl10BG1.png" alt=""></div>
             <div class="content">
               <div class="item">
                 <div class="title content_title">Личная встреча для профориентации ребенка</div>
@@ -508,7 +451,7 @@
           <div class="innerWrapper">
             <div class="leftSide">
               <h3 class="title">Давайте вместе найдем верный путь для успешного будущего вашего ребенка</h3>
-              <div class="description content_text">Поможем вам выбрать такие направления для развития, в&nbsp;которых ребенок сможет самореализоваться<br class='later2'> и будет чувствовать<br class='later2'> себя счастливым</div>
+              <div class="description content_text">Поможем вам выбрать такие направления для развития, в&nbsp;которых ребенок сможет самореализоватьсяи будет чувствовать себя счастливым</div>
             </div>
             <div class="rightSide">
               <div class="formWrapper">
