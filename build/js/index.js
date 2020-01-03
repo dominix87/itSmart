@@ -25,6 +25,116 @@ var Index =
     Index.fixedHeader();
     Index.tinyAnimation();
     Index.sliderInit();
+    Index.mobileFirstSlider();
+    Index.mobileSecondSlider();
+    Index.mobileThirdSlider();
+    Index.mobileFourthSlider();
+  },
+
+  mobileFirstSlider: function(){
+    var slider = $('.content', '.section2');
+
+    if($(slider).hasClass('slick-slider')) {
+      slider.slick("unslick");
+    }
+
+    if($(window).width() < 992) {
+      $(slider).slick({
+        infinite: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 1,
+        prevArrow: '<button class="prev__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+        nextArrow: '<button class="next__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+        mobileFirst: true,
+        responsive:[{
+          breakpoint:765,
+          settings:{
+            slidesToShow: 2
+          }
+        }]
+      })
+    }
+  },
+
+  mobileSecondSlider: function(){
+    var slider = $('.content', '.section5');
+
+    if($(slider).hasClass('slick-slider')) {
+      slider.slick("unslick");
+    }
+
+    if($(window).width() < 992) {
+      $(slider).slick({
+        infinite: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 1,
+        prevArrow: '<button class="prev__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+        nextArrow: '<button class="next__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+        mobileFirst: true,
+        responsive:[{
+          breakpoint:765,
+          settings:{
+            slidesToShow: 2
+          }
+        }]
+      })
+    }
+  },
+
+  mobileThirdSlider: function(){
+    var slider = $('.content', '.section7');
+
+    if($(slider).hasClass('slick-slider')) {
+      slider.slick("unslick");
+    }
+
+    if($(window).width() < 992) {
+      $(slider).slick({
+        infinite: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        prevArrow: '<button class="prev__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+        nextArrow: '<button class="next__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+        mobileFirst: true,
+        responsive:[{
+          breakpoint:765,
+          settings:{
+            slidesToShow: 2
+          }
+        }]
+      })
+    }
+  },
+
+  mobileFourthSlider: function(){
+    var slider = $('ul', '.section8');
+
+    if($(slider).hasClass('slick-slider')) {
+      slider.slick("unslick");
+    }
+
+    if($(window).width() < 765) {
+      $(slider).slick({
+        infinite: true,
+        arrows: true,
+        dots: false,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        prevArrow: '<button class="prev__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+        nextArrow: '<button class="next__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><polyline points="0,9 0,6 15,6 15,9 0,9 "/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/><polyline points="16.8,5.5 19,7.5 12,15 9.8,13 16.8,5.5 "/><polygon points="16.8,9.5 19,7.5 19,7.5 "/><path d="M19,7.5l-2.2-2L19,7.5z"/><polyline points="9.8,2 12,0 19,7.5 16.8,9.5 9.8,2 "/></svg></button>',
+        mobileFirst: true,
+        responsive:[{
+          breakpoint:765,
+          settings:{
+            slidesToShow: 2
+          }
+        }]
+      })
+    }
   },
 
   sliderInit:function () {
