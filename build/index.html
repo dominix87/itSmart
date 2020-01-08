@@ -23,11 +23,11 @@
         <div class="innerWrapper"><a class="logo" href="#section1" onclick="Index.go_to(this, event)"><img src="img/logo.png" alt=""></a>
           <nav class="navigation" id="mobMenu">
             <ul>
-              <li><a href="#section3" onclick="Index.go_to(this, event)">О нас</a></li>
-              <li><a href="#section5" onclick="Index.go_to(this, event)">Как мы работаем</a></li>
-              <li><a href="#section6" onclick="Index.go_to(this, event)">Учебный процесс</a></li>
+              <li><a href="#section5" onclick="Index.go_to(this, event)">О нас</a></li>
               <li><a href="#section6" onclick="Index.go_to(this, event)">Этапы развития</a></li>
-              <li><a href="#section6" onclick="Index.go_to(this, event)">Отзывы</a></li>
+              <li><a href="#section7" onclick="Index.go_to(this, event)">Учебный процесс</a></li>
+              <li><a href="#section9" onclick="Index.go_to(this, event)">Отзывы</a></li>
+              <li><a href="#section10" onclick="Index.go_to(this, event)">Как мы работаем</a></li>
             </ul>
             <button class="closeMenu" onclick="Index.closeMenu();">
                   <svg class="icon icon-closeModal ">
@@ -60,9 +60,9 @@
             <div class="textBlock">
               <h3 class="title">Детская IT-школа<br> в Днепре</h3>
               <div class="text1 content_text">Даем детям важные знания<br class='later2'> и навыки для успешного будущего<br class='later2'> в цифровом мире</div>
-              <div class="text2 content_text">Запишитесь на бесплатную профориентацию, чтобы раскрыть потенциал ребенка и получить персональный план развития</div>
+              <div class="text2 content_text">Запишитесь на бесплатную профориентацию, чтобы раскрыть<br class='tab'> потенциал ребенка и получить<br class='tab'> персональный план развития</div>
               <div class="btnWrap">
-                <button class="btn" onclick="Index.showFormSpec(this)" data-title="Записаться на бесплатную профориентацию" data-btnName="Записаться" data-orderType="Запись на бесплатную профориентацию(первый экран)">Записаться</button>
+                <button class="btn" onclick="Index.showFormSpec(this)" data-title="&lt;span&gt;Запишитесь на бесплатную профориентацию,&lt;/span&gt; чтобы сделать первый шаг к успешному будущему ребенка" data-btnName="Записаться" data-orderType="Запись на бесплатную профориентацию(первый экран)">Записаться</button>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@
               <div class="descriptionTop desc">Мы сами родители и&nbsp;прекрасно понимаем, насколько для вас важно обеспечить успешный старт в&nbsp;жизни ребенка</div>
               <div class="descriptionBottom content_text">Поэтому разработали с&nbsp;методистами профессиональную консультацию по&nbsp;профориентации, которая ответит на&nbsp;все эти вопросы и поможет выбрать правильный вектор развития ребёнка</div>
               <div class="btnWrap">
-                <button class="btn" onclick="Index.showFormSpec(this)" data-title="Записаться на профориентацию" data-btnName="Записаться" data-orderType="запись на проориентацию">Записаться на профориентацию</button>
+                <button class="btn" onclick="Index.showFormSpec(this)" data-title="&lt;span&gt;Запишитесь на бесплатную профориентацию,&lt;/span&gt; чтобы сделать первый шаг к успешному будущему ребенка" data-btnName="Записаться" data-orderType="Вопросы родителей (2 блок)">Записаться на профориентацию</button>
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@
                 <input type="hidden" name="project_name" value="">
                 <input type="hidden" name="admin_email" value="">
                 <input type="hidden" name="registration_type" value="форма">
-                <input type="hidden" name="order_type" value="Запись на бесплатную проориентацию (4 блок)">
+                <input type="hidden" name="order_type" value="Запись на бесплатную профриентацию (4 блок)">
                 <input type="hidden" name="page_url" value="">
                 <input type="hidden" name="user_agent" value="&lt;?php echo $user_agent?&gt;">
                 <input type="hidden" name="utm_source" value="&lt;?php echo $data[&quot;utm_source&quot;]?&gt;">
@@ -185,12 +185,16 @@
                 <input type="hidden" name="click_id" value="&lt;?php echo $data[&quot;click_id&quot;]?&gt;">
                 <input type="hidden" name="affilliate_id" value="&lt;?php echo $data[&quot;affiliate_id&quot;]?&gt;">
                 <div class="inputWrapper">
-                  <input name="name" type="text" required>
-                  <div class="text">Имя</div>
+                  <label>
+                    <input name="name" type="text" required>
+                    <div class="text">Имя</div>
+                  </label>
                 </div>
                 <div class="inputWrapper">
-                  <input name="phone" type="tel" required>
-                  <div class="text">Телефон</div>
+                  <label>
+                    <input name="phone" type="tel" required>
+                    <div class="text">Телефон</div>
+                  </label>
                 </div>
                 <div class="btnWrap">
                   <button class="btn">Записаться</button>
@@ -275,7 +279,7 @@
                     <li>Робототехника, 1 уровень</li>
                   </ul>
                   <div class="btnWrap">
-                    <button class="btn">Записаться на встречу</button>
+                    <button class="btn" onclick="Index.showFormSpec(this)" data-title="&lt;span&gt;Запишитесь на бесплатную профориентацию,&lt;/span&gt; чтобы сделать первый шаг к успешному будущему ребенка" data-btnName="Записаться" data-orderType="Для детей 5-7 лет (6 блок)">Записаться на встречу</button>
                   </div>
                 </div>
               </div>
@@ -300,7 +304,7 @@
                     <li>Робототехника, 2 уровень</li>
                   </ul>
                   <div class="btnWrap">
-                    <button class="btn">Записаться на встречу</button>
+                    <button class="btn" onclick="Index.showFormSpec(this)" data-title="&lt;span&gt;Запишитесь на бесплатную профориентацию,&lt;/span&gt; чтобы сделать первый шаг к успешному будущему ребенка" data-btnName="Записаться" data-orderType="Для детей 8-10 лет (6 блок)">Записаться на встречу</button>
                   </div>
                 </div>
               </div>
@@ -327,7 +331,7 @@
                     <li>Робототехника, 3-4 уровень</li>
                   </ul>
                   <div class="btnWrap">
-                    <button class="btn">Записаться на встречу</button>
+                    <button class="btn" onclick="Index.showFormSpec(this)" data-title="&lt;span&gt;Запишитесь на бесплатную профориентацию,&lt;/span&gt; чтобы сделать первый шаг к успешному будущему ребенка" data-btnName="Записаться" data-orderType="Для детей 11-13 лет (6 блок)">Записаться на встречу</button>
                   </div>
                 </div>
               </div>
@@ -356,7 +360,7 @@
                     <li>InstaGirl</li>
                   </ul>
                   <div class="btnWrap">
-                    <button class="btn">Записаться на встречу</button>
+                    <button class="btn" onclick="Index.showFormSpec(this)" data-title="&lt;span&gt;Запишитесь на бесплатную профориентацию,&lt;/span&gt; чтобы сделать первый шаг к успешному будущему ребенка" data-btnName="Записаться" data-orderType="Для детей 13-16 лет (6 блок)">Записаться на встречу</button>
                   </div>
                 </div>
               </div>
@@ -371,7 +375,7 @@
         <div class="siteWidth container-fluid">
           <div class="innerWrapper">
             <div class="leftSide">
-              <h2 class="title">4 составляющих учебного процесса в&nbsp;СМАРТ</h2>
+              <h2 class="title">4 составляющих<br class='tabO'> учебного процесса в&nbsp;СМАРТ</h2>
               <div class="imageBlock"><img src="img/bl7BG1.png" alt=""></div>
             </div>
             <div class="rightSide">
@@ -380,25 +384,25 @@
                       <svg class="icon icon-icon9 ">
                         <use xlink:href="img/svg/sprite.svg#icon9"></use>
                       </svg>
-                  <div class="text content_text"><span>Проектный подход в обучении.</span> Каждый учебный модуль заканчивается проектом, из&nbsp;которых ребята формируют свое портфолио</div>
+                  <div class="text content_text"><span>Проектный<br class='later2'> подход в обучении.</span> Каждый учебный модуль заканчивается проектом, из&nbsp;которых ребята формируют свое портфолио</div>
                 </div>
                 <div class="item">
                       <svg class="icon icon-icon8 ">
                         <use xlink:href="img/svg/sprite.svg#icon8"></use>
                       </svg>
-                  <div class="text content_text"><span>Геймификация</span> Мотивирующая система оценивания - ученики за&nbsp;свои успехи и активности зарабатывают бонусы и&nbsp;обменивают их на ценные призы</div>
+                  <div class="text content_text"><span>Геймификация</span> Мотивирующая<br class='later2'> система оценивания - ученики за&nbsp;свои<br class='later2'> успехи и активности зарабатывают бонусы и&nbsp;обменивают их на&nbsp;ценные призы</div>
                 </div>
                 <div class="item">
                       <svg class="icon icon-icon4 ">
                         <use xlink:href="img/svg/sprite.svg#icon4"></use>
                       </svg>
-                  <div class="text content_text"><span>Экскурсии в IT-компании</span> Встречи и мотивирующие лекции с&nbsp;предпринимателями и&nbsp;IT-экспертами города</div>
+                  <div class="text content_text"><span>Экскурсии<br class='later2'> в IT-компании</span> Встречи<br class='later2'> и мотивирующие лекции с&nbsp;предпринимателями и&nbsp;IT-экспертами города</div>
                 </div>
                 <div class="item">
                       <svg class="icon icon-icon6 ">
                         <use xlink:href="img/svg/sprite.svg#icon6"></use>
                       </svg>
-                  <div class="text content_text"><span>Занятия в лаборатории Soft Skills</span> Тренинги по развитию творческого и&nbsp;логического мышления, командной работе, управлению временем, самопрезентации, ораторскому искусству и актерскому мастерству</div>
+                  <div class="text content_text"><span>Занятия<br class='later2'> в лаборатории Soft Skills</span> Тренинги<br class='later2'> по развитию творческого и&nbsp;логического мышления, командной работе, управлению временем, самопрезентации, ораторскому искусству и&nbsp;актерскому мастерству</div>
                 </div>
               </div>
               <div class="bottomSide">
@@ -422,7 +426,7 @@
           <div class="topSide">
             <div class="leftSide">
               <h2 class="title">Родители — часть нашей команды</h2>
-              <div class="description content_text">Помогаем родителям лучше понимать увлечения и интересы ребенка, быть на&nbsp;одной волне, а&nbsp;детям — стать ближе к&nbsp;родителям, быть открытыми и делиться своими успехами.</div>
+              <div class="description content_text">Помогаем родителям лучше понимать увлечения и интересы ребенка, быть на&nbsp;одной волне, а&nbsp;детям — стать ближе к&nbsp;родителям, быть открытыми и&nbsp;делиться своими успехами.</div>
             </div>
             <div class="rightSide"><img class="lozad" src="img/spacer.gif" data-src="img/bl8img1.jpg" alt=""></div>
           </div>
@@ -441,7 +445,7 @@
         <div class="siteWidth container-fluid">
           <div class="innerWrapper">
             <div class="leftSide">
-              <h2 class="title">Что<br class='later2'> говорят наши<br class='later2'> ученики и их<br class='later2'> родители</h2>
+              <h2 class="title">Что<br class='later2'> говорят наши<br class='later2'> ученики<br class='tabO'> и их<br class='later2'> родители</h2>
               <div class="sliderWrapper">
                 <div class="currentSlide">01</div>
                 <div class="sliderBlock">
@@ -467,7 +471,7 @@
             <div class="rightSide">
               <h2 class="title">Что<br class='later2'> говорят наши<br class='later2'> ученики и их<br class='later2'> родители</h2>
               <div class="btnWrap">
-                <button class="btn" onclick="Index.showFormSpec(this)" data-title="Записаться на экскурсию в школу" data-btnName="Записаться" data-orderType="Запись на экскурсию в школу">Записаться на экскурсию в школу</button>
+                <button class="btn" onclick="Index.showFormSpec(this)" data-title="&lt;span&gt;Запишитесь на бесплатную экскурсию в школу,&lt;/span&gt; чтобы сделать первый шаг к успешному будущему ребенка" data-btnName="Записаться" data-orderType="Запись на экскурсию в школу">Записаться на экскурсию в школу</button>
               </div>
             </div>
           </div>
@@ -539,12 +543,16 @@
                     <input type="hidden" name="click_id" value="&lt;?php echo $data[&quot;click_id&quot;]?&gt;">
                     <input type="hidden" name="affilliate_id" value="&lt;?php echo $data[&quot;affiliate_id&quot;]?&gt;">
                     <div class="inputWrapper">
-                      <input name="name" type="text" required>
-                      <div class="text">Имя</div>
+                      <label>
+                        <input name="name" type="text" required>
+                        <div class="text">Имя</div>
+                      </label>
                     </div>
                     <div class="inputWrapper">
-                      <input name="phone" type="tel" required>
-                      <div class="text">Телефон</div>
+                      <label>
+                        <input name="phone" type="tel" required>
+                        <div class="text">Телефон</div>
+                      </label>
                     </div>
                     <div class="btnWrap">
                       <button class="btn">Записаться</button>
@@ -585,7 +593,7 @@
       <div class="footerBottom">
         <div class="siteWidth container-fluid">
           <div class="innerWrapper">
-            <div class="politics"><a href="#" onclick="Index.showPolitics(1);">Политика конфиaденциальности</a><a href="#" onclick="Index.showPolitics(2);">Отказ от ответственности</a><a href="#" onclick="Index.showPolitics(3);">Согласие с рассылкой</a></div><a class="rezartLogo" href="https://rezart.agency/" target="_blank">
+            <div class="politics"><a href="#" onclick="Index.showPolitics(1);">Политика конфиденциальности</a><a href="#" onclick="Index.showPolitics(2);">Отказ от ответственности</a><a href="#" onclick="Index.showPolitics(3);">Согласие с рассылкой</a></div><a class="rezartLogo" href="https://rezart.agency/" target="_blank">
                   <svg class="icon icon-rezart_logo ">
                     <use xlink:href="img/svg/sprite.svg#rezart_logo"></use>
                   </svg></a>
@@ -596,7 +604,7 @@
     <div class="hiddenBlock">
       <div class="orderPanel" id="mainForm">
         <div class="wrapper">
-          <p class="title">Заказать звонок</p>
+          <p class="title content_title">Заказать звонок</p>
           <form onsubmit="Index.sendInit(this);return false" novalidate>
             <input type="hidden" name="project_name" value="B-lawyer">
             <input type="hidden" name="admin_email" value="">
@@ -621,12 +629,16 @@
             <input type="hidden" name="click_id" value="&lt;?php echo $data[&quot;click_id&quot;]?&gt;">
             <input type="hidden" name="affilliate_id" value="&lt;?php echo $data[&quot;affiliate_id&quot;]?&gt;">
             <div class="inputWrapper">
-              <input name="name" type="text" required>
-              <div class="text">Имя</div>
+              <label>
+                <input name="name" type="text" required>
+                <div class="text">Имя</div>
+              </label>
             </div>
             <div class="inputWrapper">
-              <input name="phone" type="tel" required>
-              <div class="text">Телефон</div>
+              <label>
+                <input name="phone" type="tel" required>
+                <div class="text">Телефон</div>
+              </label>
             </div>
             <div class="btnWrap">
               <button class="btn">Отправить</button>
@@ -636,7 +648,7 @@
       </div>
       <div class="orderPanel" id="callBackForm">
         <div class="wrapper">
-          <p class="title">Заказать звонок</p>
+          <p class="title content_title"><span>Оставьте заявку</span> и мы вам перезвоним</p>
           <form onsubmit="Index.sendInit(this);return false" novalidate>
             <input type="hidden" name="project_name" value="B-lawyer">
             <input type="hidden" name="admin_email" value="">
@@ -661,15 +673,19 @@
             <input type="hidden" name="click_id" value="&lt;?php echo $data[&quot;click_id&quot;]?&gt;">
             <input type="hidden" name="affilliate_id" value="&lt;?php echo $data[&quot;affiliate_id&quot;]?&gt;">
             <div class="inputWrapper">
-              <input name="name" type="text" required>
-              <div class="text">Имя</div>
+              <label>
+                <input name="name" type="text" required>
+                <div class="text"> Имя</div>
+              </label>
             </div>
             <div class="inputWrapper">
-              <input name="phone" type="tel" required>
-              <div class="text">Телефон</div>
+              <label>
+                <input name="phone" type="tel" required>
+                <div class="text">Телефон</div>
+              </label>
             </div>
             <div class="btnWrap">
-              <button class="btn">Записаться</button>
+              <button class="btn">Заказать звонок</button>
             </div>
           </form>
         </div>

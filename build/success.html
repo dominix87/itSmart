@@ -46,7 +46,7 @@
     <div class="hiddenBlock">
       <div class="orderPanel" id="mainForm">
         <div class="wrapper">
-          <p class="title">Заказать звонок</p>
+          <p class="title content_title">Заказать звонок</p>
           <form onsubmit="Index.sendInit(this);return false" novalidate>
             <input type="hidden" name="project_name" value="B-lawyer">
             <input type="hidden" name="admin_email" value="">
@@ -71,12 +71,16 @@
             <input type="hidden" name="click_id" value="&lt;?php echo $data[&quot;click_id&quot;]?&gt;">
             <input type="hidden" name="affilliate_id" value="&lt;?php echo $data[&quot;affiliate_id&quot;]?&gt;">
             <div class="inputWrapper">
-              <input name="name" type="text" required>
-              <div class="text">Имя</div>
+              <label>
+                <input name="name" type="text" required>
+                <div class="text">Имя</div>
+              </label>
             </div>
             <div class="inputWrapper">
-              <input name="phone" type="tel" required>
-              <div class="text">Телефон</div>
+              <label>
+                <input name="phone" type="tel" required>
+                <div class="text">Телефон</div>
+              </label>
             </div>
             <div class="btnWrap">
               <button class="btn">Отправить</button>
@@ -86,7 +90,7 @@
       </div>
       <div class="orderPanel" id="callBackForm">
         <div class="wrapper">
-          <p class="title">Заказать звонок</p>
+          <p class="title content_title"><span>Оставьте заявку</span> и мы вам перезвоним</p>
           <form onsubmit="Index.sendInit(this);return false" novalidate>
             <input type="hidden" name="project_name" value="B-lawyer">
             <input type="hidden" name="admin_email" value="">
@@ -111,15 +115,19 @@
             <input type="hidden" name="click_id" value="&lt;?php echo $data[&quot;click_id&quot;]?&gt;">
             <input type="hidden" name="affilliate_id" value="&lt;?php echo $data[&quot;affiliate_id&quot;]?&gt;">
             <div class="inputWrapper">
-              <input name="name" type="text" required>
-              <div class="text">Имя</div>
+              <label>
+                <input name="name" type="text" required>
+                <div class="text"> Имя</div>
+              </label>
             </div>
             <div class="inputWrapper">
-              <input name="phone" type="tel" required>
-              <div class="text">Телефон</div>
+              <label>
+                <input name="phone" type="tel" required>
+                <div class="text">Телефон</div>
+              </label>
             </div>
             <div class="btnWrap">
-              <button class="btn">Записаться</button>
+              <button class="btn">Заказать звонок</button>
             </div>
           </form>
         </div>

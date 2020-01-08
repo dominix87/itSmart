@@ -31,18 +31,24 @@ var Index =
     Index.mobileFourthSlider();
     Index.showHidden();
 
+
+    if($(window).width() < 576){
+      $('.item', '.section6').first().click();
+    }
+
   },
 
   showHidden: function(){
-    var switcher = $('.switcher', '.section6');
+    var item = $('.item', '.section6');
 
-    $(switcher).on('click', function(){
+    $(item).on('click', function(){
       if($(this).hasClass('active')){
-        $(switcher).removeClass('active').parent().find('.hiddenText').slideUp('slow');
+        $(item).removeClass('active').find('.hiddenText').slideUp('slow');
       }
+
       else{
-        $(switcher).removeClass('active').parent().find('.hiddenText').slideUp('slow');
-        $(this).addClass('active').parent().find('.hiddenText').slideDown('slow');
+        $(item).removeClass('active').find('.hiddenText').slideUp('slow');
+        $(this).addClass('active').find('.hiddenText').slideDown('slow');
       }
     })
   },
